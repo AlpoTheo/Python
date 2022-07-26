@@ -1,0 +1,33 @@
+n= int(input("kaç adet sayi girilecek:"))
+
+teksayilar=[]
+ciftsayilar=[]
+
+for i in range(n):
+    num=int(input("sayi giriniz"))
+    if num%2==0:
+        ciftsayilar.append(num)
+
+    else:
+        teksayilar.append(num)
+print(teksayilar)
+print(ciftsayilar)
+
+tp=0
+cp=0
+
+tp= sum(teksayilar)
+ta= len(teksayilar)
+print("tek ortalama = ",tp/ta)
+
+cp= sum(ciftsayilar)
+ca= len(ciftsayilar)
+print("Çift Ortlama = ",cp/ca)
+
+teksayilar.sort(reverse=True)
+print("Tek sayıların büyükten küçüğe sıralaması:")
+print(teksayilar)
+
+ciftsayilar.sort(reverse=True)
+print("Çift sayıların büyükten küçüğe sıralaması:")
+print(ciftsayilar)  
