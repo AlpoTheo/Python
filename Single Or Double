@@ -1,33 +1,42 @@
+ts=[]
+cs=[]
+
 n= int(input("kaç adet sayi girilecek:"))
 
-teksayilar=[]
-ciftsayilar=[]
-
 for i in range(n):
-    num=int(input("sayi giriniz"))
-    if num%2==0:
-        ciftsayilar.append(num)
+    sayi=int(input("sayi giriniz: "))
+    if sayi%2==0:
+        cs.append(sayi)
 
     else:
-        teksayilar.append(num)
-print(teksayilar)
-print(ciftsayilar)
+        ts.append(sayi)
+print(f"tek olan sayilar= {ts}")
+print(f"tek olan sayilar= {cs}")
 
-tp=0
-cp=0
+Tt=0
+Tc=0
 
-tp= sum(teksayilar)
-ta= len(teksayilar)
-print("tek ortalama = ",tp/ta)
+def ortalama_ts():
+    Tt= sum(ts)
+    ta= len(ts)
+    print("Tek ortalama = ",Tt/ta)
 
-cp= sum(ciftsayilar)
-ca= len(ciftsayilar)
-print("Çift Ortlama = ",cp/ca)
+def ortalama_cs():
+    ct= sum(cs)
+    ca= len(cs)
+    print("Çift Ortlama = ",ct/ca)
 
-teksayilar.sort(reverse=True)
-print("Tek sayıların büyükten küçüğe sıralaması:")
-print(teksayilar)
+def ts_siralama():
+    ts.sort(reverse=True)
+    print("Tek sayilarinin buyukten kucuge siralamasi:")
+    print(ts)
 
-ciftsayilar.sort(reverse=True)
-print("Çift sayıların büyükten küçüğe sıralaması:")
-print(ciftsayilar)  
+def cs_siralama():
+    cs.sort(reverse=True)
+    print("Çift sayilarin buyukten kucuge siralamasi:")
+    print(cs)
+
+ortalama_ts()
+ortalama_cs()
+ts_siralama()
+cs_siralama()
